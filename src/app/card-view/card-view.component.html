@@ -1,0 +1,8 @@
+<div id = "front" (click)="reveal()">
+    <p>{{card.front}}</p>
+</div>
+<div *ngIf="revealed" id = "back">
+    <p>{{card.back}}</p>
+    <button type="button" (click)="rating(3)">click</button>
+</div>
+

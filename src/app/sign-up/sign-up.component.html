@@ -4,25 +4,25 @@
 			<div class="app-title">
 				<h1>Sign up</h1>
 			</div>
+			<form #signUp="ngForm" (ngSubmit)="onClickSubmit(signUp.value)">
+				<div class="signup-form">
+					<div class="control-group">
+						<input type="text" class="signup-field" value="" placeholder="name" id="name" name="name" ngModel>
+						<label for="signup-name"></label>
+					</div>
 
-			<div class="signup-form">
-                <div class="control-group">
-                    <input type="text" class="signup-field" value="" placeholder="name" id="signup-name">
-                    <label for="signup-name"></label>
-                </div>
-                    
-				<div class="control-group">
-				<input type="text" class="signup-field" value="" placeholder="username" id="signup-name">
-				<label for="signup-username"></label>
+					<div class="control-group">
+						<input type="text" class="signup-field" value="" placeholder="username" id="username" name="username" ngModel>
+						<label for="signup-username"></label>
+					</div>
+
+					<div class="control-group">
+						<input type="password" class="signup-field" value="" placeholder="password" id="password" name="password" ngModel>
+						<label for="signup-pass"></label>
+					</div>
+					<input class="btn btn-primary btn-large btn-block" type="submit" value="Sign Up">
 				</div>
-
-				<div class="control-group">
-				<input type="password" class="signup-field" value="" placeholder="password" id="signup-pass">
-				<label for="signup-pass"></label>
-				</div>
-
-				<a class="btn btn-primary btn-large btn-block" href="#">SIGN UP</a>
-			</div>
+			</form>
 		</div>
 	</div>
 </body>

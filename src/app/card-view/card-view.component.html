@@ -1,8 +1,9 @@
-<div id = "front" (click)="reveal()">
-    <p>{{card.front}}</p>
+<div class = "card-front" [style.height.%]="revealed ? 30 : 100" (click)="reveal()">
+    <h2>{{card.front}}</h2>
 </div>
-<div *ngIf="revealed" id = "back">
-    <p>{{card.back}}</p>
+<div *ngIf="revealed" class = "card-back">
+    <hr>
+    <h2>{{card.back}}</h2>
     <button type="button" (click)="rating(3)">click</button>
 </div>
 

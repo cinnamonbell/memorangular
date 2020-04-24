@@ -1,4 +1,9 @@
 <p>Reviewed: {{reviewedCount}}</p>
 <p>Test evaluation: {{testEvaluation}}</p>
-<app-card-view [card]="collection[reviewedCount]"
+<app-card-view *ngIf="!completed" [card]="collection[reviewedCount]"
  (evaluated)="nextCard($event)"></app-card-view>
+<div *ngIf="completed">
+    <h2>
+        All reviews complete!
+    </h2>
+</div>

@@ -10,6 +10,7 @@ export class CollectionViewComponent implements OnInit {
   collection: Array<Card> = [];
   reviewedCount: number;
   testEvaluation: number;
+  completed: boolean = false;
 
   constructor() {
     // mock data
@@ -30,6 +31,7 @@ export class CollectionViewComponent implements OnInit {
   nextCard(evaluation: number): void {
     this.reviewedCount++;
     this.testEvaluation = evaluation;
+    if (this.reviewedCount == this.collection.length) this.completed = true;
   }
 
 }

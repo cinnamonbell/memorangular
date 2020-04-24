@@ -1,4 +1,7 @@
 <p>Reviewed: {{reviewedCount}}</p>
+<div class="progress">
+    <div class="progress-bar bg-info" [style.width.%]="reviewedCount/collection.length*100"></div>
+</div>
 <p>Test evaluation: {{testEvaluation}}</p>
 <app-card-view *ngIf="!completed" [card]="collection[reviewedCount]"
  (evaluated)="nextCard($event)"></app-card-view>

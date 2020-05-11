@@ -1,0 +1,28 @@
+<body>
+	<div class="signup">
+		<div class="signup-screen">
+			<div class="app-title">
+				<h1>Sign up</h1>
+			</div>
+			<form #signUp="ngForm" (ngSubmit)="onClickSubmit(signUp.value)">
+				<div class="signup-form">
+					<div class="control-group">
+						<input type="text" class="signup-field" value="" placeholder="name" id="name" name="name" ngModel>
+						<label for="signup-name"></label>
+					</div>
+
+					<div class="control-group">
+						<input type="text" class="signup-field" value="" placeholder="username" id="username" name="username" ngModel>
+						<label for="signup-username"></label>
+					</div>
+
+					<div class="control-group">
+						<input type="password" class="signup-field" value="" placeholder="password" id="password" name="password" ngModel>
+						<label for="signup-pass"></label>
+					</div>
+					<input class="btn btn-primary btn-large btn-block" type="submit" value="Sign Up">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
